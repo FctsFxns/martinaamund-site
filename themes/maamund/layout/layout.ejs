@@ -1,0 +1,32 @@
+<%# if (page.layout == 'php') {%>
+<%# unescape(page.content) %>
+<%# } else { %>
+	<!doctype html>
+	<html lang="en">
+	  <head>
+			<%- partial('_partial/head') %>
+	  </head>
+	  <body class="<%- page.layout ? 'body-' + page.layout : 'body-home' %>">
+			<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+			<!-- Main video on homepage-->
+			<%- partial('_partial/homepage-video') %>
+			<!-- Header with navigation -->
+			<%- partial('_partial/header') %>
+
+ 			<% if (path == 'index.html'){ %>
+				<!-- Default full image -->
+			  <div id="works-bg" data-img-src="" class="snap-block"></div>
+ 			<% } %>
+
+
+			<!-- Main content -->
+			<main id="content" class="snap-block">
+			  <%- body %>          
+			</main>
+			<!-- Footer & Closure -->
+			<%- partial('_partial/footer') %>
+			<%- partial('_partial/closure') %>
+	  </body>
+	</html>
+<%# } %>
+

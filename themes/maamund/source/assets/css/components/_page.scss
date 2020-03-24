@@ -1,0 +1,18 @@
+.layout-page {
+	article > div > * {
+		margin-left: 0;
+		@include media-breakpoint-down(lg) {
+			margin-left: var(--s1);
+		}
+	}
+	padding-top: var(--s5);
+	padding-bottom: var(--s3);
+	@include media-breakpoint-down(lg) {
+		padding-bottom: var(--s5);
+	}
+	p {
+    font-size: var(--s0);
+    text-indent: var(--s1);
+    line-height: var(--line-height-big);
+	}
+}

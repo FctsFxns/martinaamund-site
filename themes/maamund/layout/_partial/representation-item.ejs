@@ -1,0 +1,39 @@
+<!-- We'll be using hcard for semantics on every contact -->
+<div class="contact-item h-card">
+	<!-- Form (if applies) -->
+	<% if((items[contact].form) && items[contact].form == true) {%>
+		<!-- Contact name -->
+		<h3 class="p-name" data-title="<%= items[contact].name %>" title="<%= items[contact].name %>">
+			<a href="#contact-<%= contact %>" class="btn-form">
+				<%- spanize(items[contact].name) %>
+			</a>
+		</h3>
+		<%- partial('_partial/form', {contact: contact, items: items}) %>
+	<% } else { %>	
+		<h3 class="p-name" data-title="<%= items[contact].name %>" title="<%= items[contact].name %>">
+			<%- spanize(items[contact].name) %>
+		</h3>
+	<% } %>	
+	<!-- Contact details -->
+	<div class="details">
+			<% if((items[contact].web) && items[contact].web !== '') {%>
+				<p class="url">
+					<a href="http://<%= items[contact].web %>" class="u-url" title="Visit <%= items[contact].name %> website">
+						<%= items[contact].web %>						
+					</a>
+				</p>
+			<% } %>
+			<% if((items[contact].address) && items[contact].address !== '') {%>
+				<p class="p-street-address"><%= items[contact].address %></p>
+			<% } %>
+			<% if((items[contact].city) && items[contact].city !== '') {%>
+				<p clasS="p-locality"><%= items[contact].city %></p>
+			<% } %>
+			<% if((items[contact].country) && items[contact].country !== '') {%>
+				<p class="p-country-name"><%= items[contact].country %></p>
+			<% } %>
+			<% if((items[contact].phone) && items[contact].phone !== '') {%>
+				<p class="p-tel"><%= items[contact].phone %></p>
+			<% } %>
+	</div>
+</div>

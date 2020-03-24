@@ -1,0 +1,13 @@
+<% if(page.posts) {%>
+  <div id="showreel" class="works-list">
+    <!-- Semantic Stuff, hide the title but make it accessible -->
+    <h2 class="sr-only sr-only-focusable">Showreel</h2>
+    <ul class="list-unstyled" data-work-current="0">
+      <% page.posts.each(function(post, index){ %>
+          <%- partial('_partial/works-preview.ejs', { post: post, index: index }) %>      
+      <% }) %>
+    </ul>
+  </div>
+<% } %>
+
+

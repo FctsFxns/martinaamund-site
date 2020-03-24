@@ -1,0 +1,10 @@
+<!-- Category title -->
+<h2><%- items['title'] %></h2>
+<!-- Contact list -->
+<div class="contact-list-infos">
+	<%# site.data.representation.forEach(item, index) { %>
+	<% for (contact in items['contacts']) { %>
+		<%- partial('_partial/representation-item', {contact: contact, items: items['contacts']}) %>
+	<% } %>
+	<%# }); %>
+</div>

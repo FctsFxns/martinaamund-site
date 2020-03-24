@@ -1,0 +1,23 @@
+body {
+	color: var(--color-main);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 { 
+	color: var(--color-main);
+}
+
+a {
+	color: var(--color-main);	
+	&:link, &:visited {
+		color: var(--color-main);	
+	}
+	&:hover, &:active {
+		color: var(--color-main);	
+	}
+}
+
+.navbar-brand,
+.navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+	color: var(--color-main);	
+}

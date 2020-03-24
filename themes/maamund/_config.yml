@@ -1,0 +1,12 @@
+# maamund theme
+# Variables
+
+# Information
+address: xxx
+email: xxx@xxx
+tlf01: "+34 111223344"
+tlf02: "+34 222334455"
+
+# Hexo settings
+exclude:
+  - "assets/vendor/bs4/js"

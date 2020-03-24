@@ -1,0 +1,13 @@
+<% if(site.data.menu) {%>
+	<div id="<%= id %>" class="collapse navbar-collapse" >
+	  <ul class="navbar-nav navbar-nav-mobile align-self-center ">
+	  	<% for (link in site.data.menu) { %>
+		  	<li class="nav-item <%- is_current(site.data.menu[link]+'/index.html') ? 'active' : '' %>">
+		  		<a class="nav-link" href="<%= url_for(site.data.menu[link]) %>" title="Go to <%= link %> page">
+	  				<%= link %><%- is_current(site.data.menu[link]+'/index.html') ? '<span class="sr-only">(current)</span>' : '' %>
+					</a>
+		  	</li>
+			<% } %>
+	  </ul>	  			
+	</div>
+<% } %>

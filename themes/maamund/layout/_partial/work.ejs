@@ -1,0 +1,47 @@
+<!-- <%= page.layout %> layout -->
+<section id="<%= page.layout %>" class="layout-<%= page.layout %> container-fluid" >
+  <article class="content">
+    <!-- Project title -->
+    <div class="row row-first no-gutters align-items-start">
+    	<div class="col-12 col-md-3 col-lg-4 ">
+        <!-- Close/Back button -->
+        <a href="<%= url_for() %>#film-<%= page.vimeo_id %>" class="btn btn-close" title="Close">X Close</a>
+      </div>
+      <div class="col-12 col-md-8 col-lg-7 ">
+        <!-- Project title -->
+        <%- partial('_partial/post/title') %>
+      </div>
+      <div class="col-12 col-md-1">
+        <!-- Next project button -->
+        <% if (page.next){ %>
+          <a href="<%- url_for(page.next.path) %>" class="btn btn-next float-right" title="<%= page.next.title %>">Next ></a>
+        <% } else { %>
+          <a href="<%- url_for(config.first_work.url) %>" class="btn btn-next float-right" title="<%- config.first_work.title %>">Next ></a>
+        <% } %>
+    	</div>
+    </div>
+    <!-- Project details -->
+    <div class="row row-middle no-gutters align-items-start">
+      <!-- Time & Film title-->
+      <div class="col-12 col-md-3 col-lg-4 ">
+        <p>
+          <span class="time"><%= page.duration %></span>
+          <span class="title">"<%= page.name %>"</span>
+        </p>
+      </div>
+      <div class="col-12 col-md-8 col-lg-7">
+        <%- partial('_partial/post/credits') %>
+      </div>
+        <!-- Film credits -->
+    </div>
+    <!-- Project details: mobiles -->
+    <div class="row row-last -justify-content-end">
+      <div class="col-12 col-md-12 ">
+        <!-- Project text, mobile only -->
+        <%- partial('_partial/post/credits-mobile') %>             
+      </div>
+    </div>
+  </article>
+  <%- partial('_partial/footer') %>
+</section>
+<!-- <%= page.layout %> layout -->

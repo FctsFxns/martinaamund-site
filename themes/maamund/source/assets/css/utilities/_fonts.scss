@@ -1,0 +1,66 @@
+/* 1.  T y p o g r a p h y   */
+@font-face{
+    font-family: 'caslon540bt';
+    src:url("../fonts/caslon/8da17789-9ee2-43f1-81ed-dfe2409cc0a3.eot?#iefix");
+    src:url("../fonts/caslon/8da17789-9ee2-43f1-81ed-dfe2409cc0a3.eot?#iefix") format("eot"),url("../fonts/caslon/b581f1ac-ce66-46a1-8bb9-77678f16875b.woff2") format("woff2"),url("../fonts/caslon/d34ad58f-916c-41fc-8b33-beb244103929.woff") format("woff"),url("../fonts/caslon/4db11989-09fa-4f5c-a5c1-4c2b09026924.ttf") format("truetype"),url('../fonts/caslon/4db11989-09fa-4f5c-a5c1-4c2b09026924.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@mixin maa-style-defaults() {
+  -moz-font-feature-settings:    "kern" 1; 
+  -ms-font-feature-settings:     "kern" 1; 
+  -o-font-feature-settings:      "kern" 1; 
+  -webkit-font-feature-settings: "kern" 1; 
+  font-feature-settings:         "kern" 1;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased; /* Chrome, Safari */
+  -moz-osx-font-smoothing: grayscale; /* Firefox */
+
+}
+@mixin maa-style-regular() {
+    font-family: var(--font-plain); 
+    font-weight: 500;
+    font-style: normal; 
+
+    hyphens: none;
+    overflow-wrap: break-word;
+
+    line-height: var(--ratio);
+}
+@mixin maa-style-special() {
+    font-family: var(--font-special); 
+    font-weight: normal; 
+    font-style: normal;
+}
+@mixin maa-style-site-title() {
+  @include maa-style-defaults();
+  @include maa-style-special();
+  line-height: 1;
+  line-height: var(--line-height-small);
+  letter-spacing: 0; 
+  font-size: calc(var(--s4) * 0.93) ; // Set the one from the Unit System
+  @include media-breakpoint-down(sm) {
+    font-size: var(--s2) ; // Set the one from the Unit System
+  }
+}
+
+@mixin maa-style-infos() {
+  @include maa-style-defaults();
+  @include maa-style-regular();
+  font-size: var(--s-2); 
+  letter-spacing: calc(0.075rem*0.4); // 75VA or 1.2px -- 40%
+  text-transform: uppercase;  
+}
+
+@mixin maa-style-work-title() {
+  @include maa-style-site-title();
+  hyphens: none;
+  font-size: var(--s4) ; 
+  letter-spacing: var(--s-5); 
+  text-transform: uppercase;
+  @include media-breakpoint-down(sm) {
+    font-size: var(--s2); 
+    letter-spacing: var(--s-6); 
+  }
+}
+

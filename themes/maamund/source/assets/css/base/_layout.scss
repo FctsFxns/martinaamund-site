@@ -1,0 +1,60 @@
+html {
+	height: 0 !important;
+}
+
+body {
+}
+
+header,
+footer {
+	background-color: transparent; 
+}
+
+main#content {
+	margin-top: var(--s5);
+}
+
+header,
+footer,
+main,
+nav {
+    display: block
+}
+
+
+.container-fluid {
+	@include media-breakpoint-up(md) {
+		padding-left: $layout-gutter-md; 
+		padding-right: $layout-gutter-md; 
+	}
+	@include media-breakpoint-up(lg) {
+		padding-left:  $layout-gutter-big ; 
+		padding-right: $layout-gutter-big ; 
+	}
+}
+
+.layout-post-video,
+.layout-home-video {
+		margin: 0 auto;
+}
+
+.navbar {
+	padding: $container-padding-y $container-padding-x;
+	@include media-breakpoint-up(md) {
+		padding-left: $layout-gutter-md;
+		padding-right: $layout-gutter-md;  	
+	}
+	@include media-breakpoint-down(sm) {
+		padding-bottom: calc( 10px + 2ex );
+	}
+	@include media-breakpoint-up(lg) {
+		padding-left:  $layout-gutter-big ; 
+		padding-right: $layout-gutter-big ;  	
+	}
+}
+
+footer {
+	.row {
+		min-width: 100%; 
+	}
+}

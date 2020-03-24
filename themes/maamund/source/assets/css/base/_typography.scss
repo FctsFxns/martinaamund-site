@@ -1,0 +1,54 @@
+body {
+  line-height: var(--ratio);
+}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    @include maa-style-defaults();
+		@include maa-style-special();
+	  line-height: 1;
+    line-height: var(--line-height-small);
+	  letter-spacing: 0.1rem; // 100VA or 1.6px
+    margin-bottom: var(--s-2);
+}
+.h1,
+h1 {
+    font-size: var(--s4);
+}
+.h2,
+h2 {
+    font-size: var(--s3);
+}
+.h3,
+h3 {
+    font-size: var(--s2);
+}
+.h4,
+h4 {
+    font-size: var(--s1);
+}
+
+body {
+	@include maa-style-special();
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: var(--s-1);
+}
+
+ol, ul, dl {
+  margin-top: 0;
+  margin-bottom: var(--s-1);
+}
+
+.btn {
+	color: var(--color-main);
+  @include maa-style-infos();
+  font-size: var(--s-2);
+  padding: 0;
+  margin-right: 0.25rem;
+  &:hover {
+		color: var(--color-main);
+		text-decoration: underline;
+  }
+}

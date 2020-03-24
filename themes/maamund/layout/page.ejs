@@ -1,0 +1,15 @@
+<!-- <%= page.layout %> layout -->
+<section id="<%= page.layout %>" class="container-fluid layout-<%= page.layout %>" >
+	<article class="row justify-content-center justify-content-md-end article article-type-<%= page.layout %>">
+		<!-- For tablet devices and above, the main content uses the 2/3 parts of the width -->
+		<div class="col-12 col-lg-9">
+		  <% if (page.title){ %>
+		  	<!-- Hide the title but make it accessible -->
+		    <h1 class="d-none"><a href="<%= page.permalink %>"><%= page.title %></a></h1>
+		  <% } %>
+		  <!-- Print the page's content -->
+		  <%- page.content %>
+		</div>
+	</article>
+</section>
+<!-- !<%= page.layout %> layout -->

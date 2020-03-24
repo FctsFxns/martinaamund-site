@@ -1,0 +1,11 @@
+# Fill it with appropiate values, then 
+# Save this file as '_config.deploy.yml'
+# The file will not included on the git repo for security reasons.
+deploy:
+  type: sftp
+  host: martinaamund.com.dedi302.your-server.de
+  user: xxxxxxxx
+  pass: xxxxxxxx
+  remotePath: public_html
+  port: 22
+  

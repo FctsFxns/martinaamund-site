@@ -1,0 +1,21 @@
+<% if (page.credits){ %>
+	<table class="credits-mobile table table-borderless">
+	  <caption class="sr-only sr-only-focusable">Movie credits</caption>
+		<tbody>
+			<tr class="first">
+				<td><%= page.duration %></td>
+				<td>"<%= page.name %>"</td>
+			</tr>
+			<% for (element in page.credits) { %>
+				<tr>
+					<td><%= Object.keys(page.credits[element])[0] %></td>
+					<td><%= page.credits[element][Object.keys(page.credits[element])[0]]; %></td>
+				</tr>
+			<% } %>
+			<tr class="last">
+				<td>&nbsp;</td>
+				<td><%- page.content %></td>
+			</tr>
+		</tbody>
+	</table>
+<% } %>

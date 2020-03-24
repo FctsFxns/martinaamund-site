@@ -1,0 +1,83 @@
+:root {
+	--font-special: 'caslon540bt', Helvetica Neue, Helvetica, Arial, sans-serif;
+	--font-plain: 'neue-haas-grotesk-display', sans-serif;
+	--ratio: 1.33333;
+
+	--s-6: calc(var(--s-5) / var(--ratio));
+	--s-5: calc(var(--s-4) / var(--ratio));
+	--s-4: calc(var(--s-3) / var(--ratio));
+	--s-3: calc(var(--s-2) / var(--ratio));
+	--s-2: calc(var(--s-1) / var(--ratio));
+	--s-1: calc(var(--s0) / var(--ratio));
+	--s0: 1rem;
+	--s1: calc(var(--s0) * var(--ratio));
+	--s2: calc(var(--s1) * var(--ratio));
+	--s3: calc(var(--s2) * var(--ratio));
+	--s4: calc(var(--s3) * var(--ratio));
+	--s5: calc(var(--s4) * var(--ratio));
+	--s6: calc(var(--s5) * var(--ratio));
+
+	--color-main: #EF7F77;
+  --color-dark: #050505;
+  --color-grey: #E1E1E1;
+  --color-blue: #d0feff; 
+  --color-soft: #fde7e6; 
+
+  --line-height: var(--ratio);
+  --line-height-xs:    calc(0.735*var(--ratio));
+  --line-height-small: calc(0.8*var(--ratio));
+  --line-height-big:   calc(1.025*var(--ratio));
+
+  --position-left-cal: -50%; 
+
+  line-height: var(--ratio);
+  font-size: calc(.333vw + 1em);
+  font-family: var(--font-plain);
+}
+
+
+$maam-color-main: #EF7F77;
+$maam-color-dark: #050505;
+$maam-color-grey: #E1E1E1;
+$maam-color-blue: #d0feff; 
+$maam-color-soft: #fde7e6; 
+
+
+
+
+// ------
+/* Project custom styles */
+
+// ------
+/* Hamburger custom styles */
+$hamburger-padding-x: 0;
+$hamburger-padding-y : 11px; 
+$hamburger-layer-color: var(--color-main);
+$hamburger-layer-width: 23px;
+$hamburger-layer-height: 2px;
+$hamburger-layer-spacing:	5px;			
+$hamburger-layer-border-radius: 0;	
+
+
+// ------
+/* Bootstrap custom styles */
+// @see: https://getbootstrap.com/docs/4.3/getting-started/theming/#variable-defaults
+$enable-rounded: false;
+$enable-shadows: false;
+// Grid settings
+// Set grid gutter in px, not ems cause we don't want to be affected by browsers settings
+$grid-gutter-width: 40px;
+// Container padding
+$container-padding-x: $grid-gutter-width / 2 ;
+$container-padding-y: $grid-gutter-width / 4 ;
+
+
+// Layout
+// CANVIEU AQUESTS 3 VALORS PER CONTROLAR L'AMPLE MAX. PER PANTALLES GRANS
+$layout-max-width: 2660px;
+// // EL 'PADDING' LATERAL PER A TABLETS
+// $layout-gutter: 30px; // 20px
+$layout-gutter-md:  24px; // 40px
+$layout-gutter-big: 50px; // 80px
+
+// $position-left-cal: -50% + $layout-gutter-big;

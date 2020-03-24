@@ -1,0 +1,17 @@
+@import "animations/collapsed-menu";
+
+
+#works-bg {
+	transition: opacity .3s linear;
+}
+body.works-list-hover #works-bg {
+	transition: opacity .3s linear;
+}
+
+body.body-home header {
+	transition: opacity .3s linear;
+}
+
+.works-list {	
+	 transition: margin .3s linear;
+}

@@ -1,0 +1,19 @@
+# Martin Aamund Film Director website
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Søren Christensen   -- Web Design -- @dslinc
+    Daniel Canet        -- UX & Web development -- @dcanetma
+
+# TECHNOLOGY COLOPHON JAMStack
+    HTML5, CSS3, 
+    Sass,
+    jQuery, Popper
+    Bootstrap,
+    Grunt,
+    Node,
+    Hexo.io,
+    BrowserSync,
+    …
+

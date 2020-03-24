@@ -1,0 +1,7 @@
+<% if(site.data.representation) {%>
+		<% for (items in site.data.representation) { %>
+			<div class="contact-list contact-list-<%- items %>">
+				<%- partial('_partial/representation-list', {items: site.data.representation[items]}) %>
+			</div>
+		<% } %>
+<% } %>

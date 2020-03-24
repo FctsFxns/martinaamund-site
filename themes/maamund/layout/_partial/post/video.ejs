@@ -1,0 +1,16 @@
+<% if (page.vimeo_id){ %>	
+	<aside  id="<%= page.layout %>-video" class="layout-<%= page.layout %>-video d-flex align-items-start">
+	 <div class="vimeo-wrapper" data-video-width="<%= page.video_width %>"  data-video-height="<%= page.video_height %>">
+		 	<a href="#" class="btn btn-play"><span>Play</span></a>
+		 	<iframe id="video" src="https://player.vimeo.com/video/<%= page.vimeo_id %>?playsinline=0" width="<%= page.video_width %>" height="<%= page.video_height %>" allowfullscreen allow="autoplay; encrypted-media">
+		 		<!-- 
+		 		<p>Your browser doesn't support Vimeo Videos. 
+		 				<a href="https://vimeo.com/<%= page.vimeo_id %>">
+		 					Watch '<%= page.name %>' for <%= page.title %> video on Vimeo
+		 				</a>.
+		 		</p> 	 -->	
+
+		 	</iframe>
+		</div>
+	</aside>
+<% } %>	

@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Exit if any subcommand fails
+set -e
+
+# if [[ $TRAVIS_BRANCH == 'deploy' ]] ; then
+
+	# Assign variables from env. settings
+	FTP_HOST=${ftp_server}
+	FTP_USERNAME=${ftp_username}
+	FTP_PASSWORD=${ftp_password}
+	FTP_PATH=${ftp_path}
+
+	SMTP_HOST=${smtp_server}
+	SMTP_USERNAME=${smtp_username}
+	SMTP_PASSWORD=${smtp_password}
+
+	# create PHP settings file
+	cp source/contact-credentials-sample.php source/contact-credentials.php
+	sed -i "/xxx.xxxx.com/s/=.*/=$SMTP_HOST/g"               source/contact-credentials.php
+	sed -i "/xxxx@martinaamund.com/s/=.*/=$SMTP_USERNAME/g"  source/contact-credentials.php
+	sed -i "/XXXXXXXXXXXX/s/=.*/=$SMTP_PASSWORD/g"           source/contact-credentials.php
+	# echo "$(cat source/contact-credentials.php)"
+
+	# Create credential deploy file
+	touch _config.deploy.yml
+	YML_FMT='\n\ndeploy:\n  type: sftp\n  host: %s\n  user: %s\n  pass: %s\n  remotePath: %s\n  port: 22\n'
+	printf "$YML_FMT" "$FTP_HOST" "$FTP_USERNAME" "$FTP_PASSWORD" "$FTP_PATH" >> _config.deploy.yml
+	# echo "$(cat  _config.deploy.yml)"
+
+	# Deploy to server
+	npm run deploy
+ 
+# else
+#  echo 'This branch will not be deployed, though. The site is deployed from "deploy" branch, only.'
+#  exit 1
+# fi

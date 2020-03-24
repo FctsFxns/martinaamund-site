@@ -1,0 +1,116 @@
+
+.layout-contact {
+	overflow: hidden;
+	padding-top: 0;
+	@include media-breakpoint-down(lg) {
+		padding-top: var(--s5);
+	}
+	@include media-breakpoint-down(md) {
+		padding-top: var(--s3);
+	}
+	@include media-breakpoint-down(sm) {
+		padding-top: 0;
+	}
+	.article-type-contact {
+		min-height: calc(100vh - 102.95px - 63.95px - 81.75px);
+		@include media-breakpoint-down(lg) {
+			min-height: calc(100vh - 300px);
+		}
+
+		@include media-breakpoint-down(md) {
+			min-height: calc(100vh - 350px);
+			margin-bottom: 200px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			min-height: calc(100vh - 300px);
+			margin-bottom: 0;
+		}
+
+	}
+	.contact-list {
+		position: relative;
+		margin-bottom: var(--s2);
+		margin-top: var(--s3);
+		@include media-breakpoint-up(lg) {
+			margin-top: 0;
+		}
+		margin-left: var(--s0);
+		@include media-breakpoint-up(lg) {
+			margin-left: 0;
+		}
+	}
+	h2 {
+		@include maa-style-infos();		
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+			text-align: right;
+			min-width: 30ch;
+			text-align: right;
+			left: -30ch;
+			padding-right: var(--s-1); 
+			top: 1ex; 
+			top: 6.5px;
+		}
+	}
+	.contact-list-infos {
+		h3 {
+			a {
+				text-decoration: none;
+				&:hover, &:active,
+				&:link, &:visited,
+				&:focus {
+					text-decoration: none;
+				}
+			}
+			overflow-wrap: break-word;
+			cursor: pointer;
+			@include maa-style-work-title();
+			line-height: 1;
+		  @include media-breakpoint-down(sm) {
+		    font-size: calc(var(--s4) * 0.93); 
+		    line-height: var(--line-height-xs);
+		    letter-spacing: var(--s-5); 
+				margin-bottom: var(--s1);
+		  }
+			margin-left: var(--s-2);
+			@include media-breakpoint-up(lg) {
+				margin-left: 0;
+			}
+			@include link-style-tachado(calc( 66.25px / 2 ), calc( 48.8333px / 2 ), var(--color-main));
+			&.active {
+				@include link-style-tachado-on();
+			}
+		}
+		.contact-item {
+			position: relative;
+
+		}
+		.details {
+			display: none;
+			margin-bottom: var(--s1);
+			margin-left: var(--s-2);
+			@include media-breakpoint-up(lg) {
+				margin-left: 0;
+				position: absolute;
+				top: var(--s2);
+				left: 0px;
+				z-index: 10;
+				left: var(--position-left-cal);
+			}
+
+			a {
+				text-decoration: none;
+				@include link-style-strikethrough-off(var(--color-main), 1.25ex);				
+				&:hover {
+					@include link-style-strikethrough(var(--color-main), 1.25ex);
+				}
+			}
+
+			p {
+				@include maa-style-infos();	
+				margin-bottom: 0;
+			}
+		}
+	}
+}

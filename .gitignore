@@ -1,0 +1,40 @@
+# custom
+sandbox
+source/contact-credentials.php
+_config.deploy.yml
+_multiconfig.yml
+package-lock.json
+
+# asset pipeline
+/node_modules
+
+# Static site generation
+db.json
+*.log
+public/
+.deploy*/
+.deploy_git
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.log
+*.orig
+*.rej
+*.swo
+*.swp
+*.vi
+*.zip
+*~
+
+# OS or Editor folders
+._*
+.cache
+.DS_Store
+.idea
+.project
+.settings
+.tmproj
+*.esproj
+nbproject
+Thumbs.db

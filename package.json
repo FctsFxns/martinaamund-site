@@ -1,0 +1,41 @@
+{
+  "name": "martinaamund-www",
+  "version": "1.0.0",
+  "description": "Show-reel project for Martin Aamund website",
+  "scripts": {
+    "prestart": "hexo clean",
+    "start": "hexo server",
+    "develop": "hexo generate --draft --watch & browser-sync start  --proxy='martinaamund.dev'  --files='public' --serveStatic='public'",
+    "pregenerate": "hexo clean",
+    "generate": "hexo generate --config _config.yml,_config.deploy.yml",
+    "deploy": "hexo deploy --config _config.yml,_config.deploy.yml",
+    "predeploy": "hexo clean",
+    "postdeploy": "rm _multiconfig.yml",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FctsFxns/martinaamund-www.git"
+  },
+  "author": "Daniel Canet",
+  "license": "MIT",
+  "hexo": {
+    "version": "3.9.0"
+  },
+  "dependencies": {
+    "hexo": "^3.9.0",
+    "hexo-asset-pipeline": "^1.8.0",
+    "hexo-auto-canonical": "^0.1.1",
+    "hexo-autoprefixer": "^2.0.0",
+    "hexo-browsersync": "^0.3.0",
+    "hexo-deployer-ftpsync": "^0.1.1",
+    "hexo-deployer-sftp": "^0.1.0",
+    "hexo-generator-feed": "^1.2.2",
+    "hexo-generator-index": "^0.2.1",
+    "hexo-generator-seo-friendly-sitemap": "^0.0.25",
+    "hexo-renderer-ejs": "^0.3.1",
+    "hexo-renderer-marked": "^2.0.0",
+    "hexo-renderer-sass": "^0.4.0",
+    "hexo-server": "^0.3.3"
+  }
+}

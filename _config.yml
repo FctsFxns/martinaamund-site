@@ -1,0 +1,134 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Martin Aamund
+subtitle: Film Director
+description: Martin Aamund, Director.
+keywords:
+author: facts&fictions
+language: en
+timezone:
+
+# Featured video on homepage
+vimeo_id: 366343469
+video_width: 1920
+video_height: 712
+first_work: 
+  url: penny
+  title: Penny
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://martinaamund.com
+root: /
+permalink: :post_title/
+# permalink_defaults:
+
+
+# "LESS IMPORTANT" settings
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render: 
+  - "**/*.txt"
+  - "**/*.php"
+  - ".htaccess"
+  - "phpmailer/"
+
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 0
+pagination_dir: page
+  
+# Date / Time format
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Extensions
+theme: maamund
+
+include:
+  - "humans.txt"
+  - "robots.txt"
+  - ".htaccess"
+  - "media/**/*"
+  - "phpmailer"
+  - "android-chrome-192x192.png"
+  - "android-chrome-512x512.png"
+  - "apple-touch-icon.png"
+  - "browserconfig.xml"
+  - "favicon-16x16.png"
+  - "favicon-32x32.png"
+  - "favicon.ico"
+  - "mstile-150x150.png"
+  - "safari-pinned-tab.svg"
+  - "site.webmanifest"
+  - "google64c4ce35184cada9.html"
+
+exclude:
+  - "contact-credentials-sample.php"
+
+# @see: https://github.com/ludoviclefevre/hexo-generator-seo-friendly-sitemap
+sitemap:
+    path: sitemap.xml
+    tag: false
+    category: false
+
+# @see: https://github.com/hexojs/hexo-generator-feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 10
+  order_by: -date
+  icon: icon.png
+
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+  
+# Home page setting
+index_generator:
+  path: '/'
+  per_page: 0
+  order_by: -date
+
+# Asset pipeline
+# @see: https://github.com/hexojs/hexo-asset-pipeline
+asset_pipeline:
+  revisioning:
+    enable: false 
+  clean_css:
+    enable: true
+    exclude: 
+      - '*.min.css'    
+  uglify_js:
+    enable: false
+  imagemin:
+    enable: false
+  html_minifier:
+    enable: true  
+    ignore_error: false
+    removeComments: true    
+    minifyJS: false         
+    minifyCSS: false        

@@ -1,0 +1,25 @@
+<% if(site.data.menu) {%>
+  <div class="align-self-end ">
+	  <ul class="navbar-nav navbar-nav-desktop">
+	  	<% let i = 1; %>
+	  	<% for (link in site.data.menu) { %>
+		  	<% if (filter) {%>
+				  	<% if (filter == i) {%>
+						  	<li class="nav-item <%- is_current(site.data.menu[link]+'/index.html') ? 'active' : '' %>">
+						  		<a class="nav-link" href="<%= url_for(site.data.menu[link]) %>" title="Go to <%= link %> page">
+					  				<%= link %><%- is_current(site.data.menu[link]+'/index.html') ? '<span class="sr-only">(current)</span>' : '' %>
+				  				</a>
+						  	</li>
+						<% } %>
+					<% } else { %>					  	
+					  	<li class="nav-item <%- is_current(site.data.menu[link]+'/index.html') ? 'active' : '' %>">
+					  		<a class="nav-link" href="<%= url_for(site.data.menu[link]) %>" title="Go to <%= link %> page">
+				  				<%= link %><%- is_current(site.data.menu[link]+'/index.html') ? '<span class="sr-only">(current)</span>' : '' %>
+			  				</a>
+					  	</li>
+					<% } %>
+				<% i = i + 1; %>
+			<% } %>
+	  </ul>
+ 	</div>
+<% } %>

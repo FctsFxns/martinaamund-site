@@ -1,0 +1,11 @@
+<section id="<%= page.layout %>" class="container-fluid layout-<%= page.layout %>" >
+	<article class="row no-gutters article article-type-<%= page.layout %> align-items-start align-items-md-center justify-content-center justify-content-lg-end">
+		<div class="col-12 col-lg-8">
+		  <% if (page.title){ %>
+		    <h1 class="sr-only sr-only-focusable"><a href="<%= page.permalink %>"><%= page.title %></a></h1>
+		  <% } %>
+		  <%- page.content %>
+		  <%- partial('_partial/representation') %>
+		</div>
+	</article>
+</section>

@@ -1,0 +1,19 @@
+
+<% if (url_for(page.path) == '/index.html'){ %>	
+	<aside id="works-featured" class="homepage-wrapper-first layout-home-video snap-block">
+	 <div class="vimeo-homepage-wrapper" data-video-width="<%= config.video_width %>"  data-video-height="<%= config.video_height %>">
+		 	<iframe id="video" 
+		 		src="https://player.vimeo.com/video/<%= config.vimeo_id %>?background=1"  allowfullscreen allow="autoplay; encrypted-media">
+		 		
+				<!--
+	 		 		<p>Your browser doesn't support the Vimeo video player.
+			 				<a href="https://vimeo.com/<%= config.vimeo_id %>">
+			 					Watch this video on Vimeo, though.
+			 				</a>.
+			 		</p>
+			 -->		 	
+		 	</iframe>
+		</div>
+		<div class="clicker"></div>
+	</aside>
+<% } %>

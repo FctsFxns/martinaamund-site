@@ -1,0 +1,18 @@
+<li >
+  <h3 id="film-<%= post.vimeo_id %>" data-work-id="<%= index %>">
+    <a href="<%- url_for(post.path) %>" data-img-src="<%= url_for(post.thumbnail) %>"  title="<%- post.name %>">
+      <%- post.title %>       
+      <span class="mobile-line"></span>  
+      <span class="line"></span>    
+    </a>
+  </h3>
+  <!-- Word details -->
+  <div class="details">
+    <p>
+      <span class="time"><%= post.duration %></span>
+      <span class="title"><%= post.name %></span>
+    </p>
+  </div>
+  <!-- Image preloader -->
+  <div class="preload-image" data-img-src="<%- url_for(post.thumbnail) %>"></div>
+</li> 
