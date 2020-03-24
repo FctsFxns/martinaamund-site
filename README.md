@@ -1,6 +1,6 @@
 # Martin Aamund site README file
 
-[![Build Status](https://travis-ci.org/FctsFxns/martinaamund-www.svg?branch=master)](https://travis-ci.org/FctsFxns/martinaamund-www)
+[![Build Status](https://travis-ci.org/FctsFxns/martinaamund-site.svg?branch=master)](https://travis-ci.org/FctsFxns/martinaamund-site)
 
 ## Getting started
 
@@ -76,7 +76,7 @@ Useful for manual deploys to local/DEV server.
 
 We use Travis for automated deployments to the live server.
 
-https://travis-ci.org/FctsFxns/martinaamund-www
+https://travis-ci.org/FctsFxns/martinaamund-site
 
 > IMPORTANT: The deploy to the live server is only made on the 'deploy' branch.
 
