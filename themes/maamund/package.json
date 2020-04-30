@@ -9,6 +9,6 @@
     "grunt-git": "~0.2.2",
     "load-grunt-tasks": "~0.2.0",
     "popper.js": "1.15.0",
-    "jquery": "3.4.1"
+    "jquery": "3.5.0"
   }
 }
